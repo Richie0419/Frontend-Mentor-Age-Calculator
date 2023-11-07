@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--Purple: hsl(259, 100%, 65%);
+--Lightred: hsl(0, 100%, 67%);
+--White: hsl(0, 0%, 100%);
+--Offwhite: hsl(0, 0%, 94%);
+--Lightgrey: hsl(0, 0%, 86%);
+--Smokeygrey: hsl(0, 1%, 44%);
+--Offblack: hsl(0, 0%, 8%);
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--Lightgrey);
+}
+
+.container{
+    background: var(--White);
+    width: 510px;
+    border-radius: 0.6rem 0.6rem 6rem 0.6rem;
+    padding: 2rem;
+}
+
+.form-container{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.6rem;
+    margin-bottom: 0.3rem;
+}
+
+input{
+    width: 100px;
+    border: 1px solid var(--Lightgrey);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    outline: 0;
+}
+
+input::placeholder{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+small{
+    margin-top: 0.5rem;
+}
+
+.submit-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-block hr{
+    width: 100%;
+    height: 1px;
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    background: var(--Purple);
+    padding: 0.6rem;
+    cursor: pointer;
+}
+
+.submit-btn .arrow{
+    width: 100%;
+}
+
+.results-output h1{
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+.results-output span{
+    color: var(--Purple);
+    width: 100px;
+}
+
+small{
+    color: var(--Lightred);
+}
+
+@media only screen and (max-width: 500px){
+    .container{
+        width: 350px;
+        padding: 2rem;
+        margin: 2rem 1rem;
+        border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+    }
+
+    .form-container{
+        margin-bottom: 4rem;
+    }
+
+    input{
+        width: 85px;
+    }
+    
+    .submit-block{
+        position: relative;
+    }
+
+    .submit-btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .results-output{
+        margin-top: 3.5rem;
+    }
+
+    .results-output h1{
+        font-size: 3.5rem;
+    }
+
+    small{
+        width: 100%;
+        font-size: 0.62rem;
+    }
+}
