@@ -11,7 +11,6 @@ const yearOtp = document.getElementById('YY');
 // FORM ELEMENT
 const submitBtn = document.querySelector('.submit-btn'); 
 
-submitBtn.addEventListener('click', handleSubmit); 
 
 const date = new Date();
 let day = date.getDate();
@@ -41,7 +40,7 @@ function validate() {
     return validator;
 }
 
-function handleSubmit(e) { 
+submitBtn.addEventListener('click', () =>{
     e.preventDefault();
     if (validate()) {
         if (dayInp.value > day) {
@@ -65,5 +64,4 @@ function handleSubmit(e) {
         monthInp.value = '';
         yearInp.value = '';
     }
-
-}
+}); 
